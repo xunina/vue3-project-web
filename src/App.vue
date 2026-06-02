@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { RouterView } from 'vue-router'
+import { useRouter, RouterView } from 'vue-router'
 
-const activeIndex = ref('1')
+const router = useRouter()
+const activeIndex = ref('home')
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
+  router.push({
+    name: key
+  })
 }
 </script>
 
@@ -16,8 +20,8 @@ const handleSelect = (key: string, keyPath: string[]) => {
     mode="horizontal"
     @select="handleSelect"
   >
-     <el-menu-item index="1">首页</el-menu-item>
-     <el-menu-item index="2">Processing Center</el-menu-item>
+     <el-menu-item index="home">首页</el-menu-item>
+     <el-menu-item index="about">关于</el-menu-item>
   </el-menu>
   </header>
 
