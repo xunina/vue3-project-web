@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter, RouterView } from 'vue-router'
+import MouseParticles from '@/components/MouseParticles.vue'
 
 const router = useRouter()
 const activeIndex = ref('home')
@@ -25,6 +26,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
   </el-menu>
   </header>
 
+  <MouseParticles />
   <RouterView />
 </template>
 
