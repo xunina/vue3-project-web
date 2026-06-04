@@ -11,6 +11,8 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BaGuaXian: typeof import('./src/components/BaGuaXian.vue')['default']
+    ElCard: typeof import('element-plus/es')['ElCard']
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
