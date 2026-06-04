@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import TaiJiRotate from '@/components/TaiJiRotate.vue';
 import BaGuaXian from '@/components/BaGuaXian.vue';
+import MouseParticles from '@/components/MouseParticles.vue';
 
 </script>
 
 <template>
   <main class="card-ctn">
+    <MouseParticles />
     <el-card class="card-com">
       <template #header>
         <div>
