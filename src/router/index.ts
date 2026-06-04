@@ -24,6 +24,16 @@ const router = createRouter({
         order: 2
       }
     },
+    {
+      path: '/echarts',
+      name: 'echarts',
+      component: () => import('../views/EchartsView.vue'),
+      meta: {
+        showInMenu: true,
+        title: '图表',
+        order: 3
+      }
+    },
   ],
 })
 
