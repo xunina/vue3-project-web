@@ -1,24 +1,36 @@
 <template>
   <div class="echarts-container">
-    <div ref="chartRef" id="barChart" style="width: 600px; height: 400px"></div>
+    <div ref="chartRef" id="barChart" style="width: 100%; height: 100%"></div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 // // 引入 echarts 核心模块，核心模块提供了 echarts 使用必须要的接口。
 import * as echarts from 'echarts/core'
 
 const chartRef = ref<HTMLElement | null>(null)
+let myChart: echarts.ECharts | null = null
+let resizeObserver: ResizeObserver | null = null
 
 onMounted(() => {
   initBarChart()
+
+  resizeBarChart()
+})
+onBeforeUnmount(() => {
+  if (resizeObserver) {
+    resizeObserver.disconnect()
+  }
+  if (myChart) {
+    myChart.dispose()
+  }
 })
 
 function initBarChart() {
-  // 接下来的使用就跟之前一样，初始化图表，设置配置项
-  const myChart = echarts.init(chartRef.value)
+  // 初始化图表，设置配置项
+  myChart = echarts.init(chartRef.value)
   myChart.setOption({
     title: {
       text: '柱状图示例',
@@ -38,15 +50,21 @@ function initBarChart() {
     ],
   })
 }
+function resizeBarChart() {
+  resizeObserver = new ResizeObserver((entries) => {
+    if (myChart) myChart.resize()
+  })
+  if (chartRef.value) {
+    resizeObserver.observe(chartRef.value)
+  }
+}
 </script>
 
 <style scoped>
 .echarts-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  padding: 20px;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
 }
 
 h2 {
