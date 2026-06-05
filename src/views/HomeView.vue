@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import TaiJiRotate from '@/components/TaiJiRotate.vue'
-import BaGuaXian from '@/components/BaGuaXian.vue'
+import TaiJiRotate from '@/components/canvas/TaiJiRotate.vue'
+import BaGuaXian from '@/components/canvas/BaGuaXian.vue'
 </script>
 
 <template>
