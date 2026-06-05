@@ -34,6 +34,26 @@ const router = createRouter({
         order: 3
       }
     },
+    {
+      path: '/pinia-demo1',
+      name: 'pinia-demo1',
+      component: () => import('../views/PiniaDemo1.vue'),
+      meta: {
+        showInMenu: true,
+        title: 'Pinia演示1',
+        order: 4
+      }
+    },
+    {
+      path: '/pinia-demo2',
+      name: 'pinia-demo2',
+      component: () => import('../views/PiniaDemo2.vue'),
+      meta: {
+        showInMenu: true,
+        title: 'Pinia演示2',
+        order: 5
+      }
+    },
   ],
 })
 

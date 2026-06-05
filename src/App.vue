@@ -16,7 +16,6 @@ const menuRoutes = computed(() => {
 })
 
 const handleSelect = (key: string) => {
-  console.log('key', key)
   router.push({ name: key })
 }
 </script>
