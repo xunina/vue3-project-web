@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import TaiJiRotate from '@/components/TaiJiRotate.vue';
-import BaGuaXian from '@/components/BaGuaXian.vue';
-
+import TaiJiRotate from '@/components/TaiJiRotate.vue'
+import BaGuaXian from '@/components/BaGuaXian.vue'
 </script>
 
 <template>
@@ -9,9 +8,7 @@ import BaGuaXian from '@/components/BaGuaXian.vue';
     <el-card class="card-com">
       <template #header>
         <div>
-          <span>
-            太极图 canvas
-          </span>
+          <span> 太极图 canvas </span>
         </div>
       </template>
       <TaiJiRotate></TaiJiRotate>
@@ -21,20 +18,21 @@ import BaGuaXian from '@/components/BaGuaXian.vue';
         <div>
           <span>先天八卦 canvas</span>
         </div>
-    </template>
+      </template>
       <BaGuaXian></BaGuaXian>
     </el-card>
   </main>
 </template>
 
 <style lang="css" scoped>
-  .card-ctn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-  }
-  .card-com{
-    max-width: 410px;
-  }
+.card-ctn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card-com {
+  max-width: 410px;
+  margin: 1rem;
+}
 </style>

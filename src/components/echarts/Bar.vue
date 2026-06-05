@@ -66,9 +66,4 @@ function resizeBarChart() {
   height: 100%;
   min-height: 400px;
 }
-
-h2 {
-  color: #333;
-  margin-bottom: 20px;
-}
 </style>

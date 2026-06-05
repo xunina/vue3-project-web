@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="echarts-container">
     <div ref="chartRef" style="width: 100%; height: 100%"></div>
   </div>
 </template>
@@ -65,3 +65,10 @@ onBeforeUnmount(() => {
 })
 watch(() => props.option, updateChart, { deep: true })
 </script>
+<style scoped>
+.echarts-container {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+</style>
