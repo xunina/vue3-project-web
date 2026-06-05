@@ -11,7 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    BaGuaXian: typeof import('./src/components/BaGuaXian.vue')['default']
+    BaGuaXian: typeof import('./src/components/canvas/BaGuaXian.vue')['default']
     Bar: typeof import('./src/components/echarts/Bar.vue')['default']
     ElCard: typeof import('element-plus/es')['ElCard']
     ElMenu: typeof import('element-plus/es')['ElMenu']
@@ -23,10 +23,10 @@ declare module 'vue' {
     IconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
     Line: typeof import('./src/components/echarts/Line.vue')['default']
-    MouseParticles: typeof import('./src/components/MouseParticles.vue')['default']
+    MouseParticles: typeof import('./src/components/canvas/MouseParticles.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TaiJiRotate: typeof import('./src/components/TaiJiRotate.vue')['default']
+    TaiJiRotate: typeof import('./src/components/canvas/TaiJiRotate.vue')['default']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
