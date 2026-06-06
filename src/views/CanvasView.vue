@@ -4,7 +4,7 @@ import BaGuaXian from '@/components/canvas/BaGuaXian.vue'
 </script>
 
 <template>
-  <main class="card-ctn">
+  <div class="card-ctn">
     <el-card class="card-com">
       <template #header>
         <div>
@@ -21,11 +21,12 @@ import BaGuaXian from '@/components/canvas/BaGuaXian.vue'
       </template>
       <BaGuaXian></BaGuaXian>
     </el-card>
-  </main>
+  </div>
 </template>
 
 <style lang="css" scoped>
 .card-ctn {
+  min-width: 410px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

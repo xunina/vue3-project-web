@@ -60,7 +60,7 @@ const router = createRouter({
               component: () => import('../views/EchartsView.vue'),
               meta: {
                 showInMenu: true,
-                title: '图表',
+                title: '图表(Echarts)',
                 order: 2,
               },
             },

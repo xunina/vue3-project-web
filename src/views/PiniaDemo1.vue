@@ -6,22 +6,18 @@
           <span>Pinia演示页面 1</span>
         </div>
       </template>
-      
+
       <div class="counter-display">
         <h3>计数器状态</h3>
         <p>当前计数: {{ counter.count }}</p>
         <p>双倍计数: {{ counter.doubleCount }}</p>
       </div>
-      
+
       <div class="counter-actions">
-        <el-button type="primary" @click="counter.increment">
-          增加计数
-        </el-button>
-        <el-button @click="resetCounter">
-          重置计数
-        </el-button>
+        <el-button type="primary" @click="counter.increment"> 增加计数 </el-button>
+        <el-button @click="resetCounter"> 重置计数 </el-button>
       </div>
-      
+
       <div class="demo-info">
         <p>这个页面与PiniaDemo2页面共享同一个Pinia store状态</p>
         <p>在一个页面中修改计数，另一个页面会实时更新</p>
@@ -43,6 +39,7 @@ const resetCounter = () => {
 <style scoped>
 .pinia-demo {
   padding: 20px;
+  min-width: 300px;
   max-width: 800px;
   margin: 0 auto;
 }

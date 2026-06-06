@@ -4,10 +4,16 @@
     <header class="layout-header">
       <TopMenu :menuRoutes="topMenuRoutes" />
     </header>
+    <button class="button-com" v-if="isMobile && leftMenuRoutes.length > 0" @click="toggleLeftMenu">
+      {{ isLeftMenuOpen ? '关闭' : '打开' }}左侧树
+    </button>
 
     <div class="layout-body">
       <!-- 左侧边栏 -->
-      <aside class="layout-sidebar" v-if="leftMenuRoutes.length">
+      <aside v-if="isMobile && isLeftMenuOpen">
+        <leftTree :menuRoutes="leftMenuRoutes" />
+      </aside>
+      <aside v-if="!isMobile && leftMenuRoutes.length" class="layout-sidebar">
         <leftTree :menuRoutes="leftMenuRoutes" />
       </aside>
 
@@ -20,13 +26,33 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter, RouterView } from 'vue-router'
 import TopMenu from './TopMenu.vue'
 import leftTree from './leftTree.vue'
 
 const router = useRouter()
 const route = useRoute()
+
+const isLeftMenuOpen = ref(false)
+const isMobile = ref(false)
+
+const toggleLeftMenu = () => {
+  isLeftMenuOpen.value = !isLeftMenuOpen.value
+}
+
+const handleResize = () => {
+  isMobile.value = window.innerWidth <= 768
+}
+
+onMounted(() => {
+  handleResize()
+  window.addEventListener('resize', handleResize)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize)
+})
 
 // 获取顶部菜单数据 - 第一层路由
 const topMenuRoutes = computed(() => {
@@ -59,6 +85,7 @@ const leftMenuRoutes = computed(() => {
 <style scoped>
 .layout-container {
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -88,5 +115,13 @@ const leftMenuRoutes = computed(() => {
   padding: 20px;
   background-color: #fff;
   overflow-y: auto;
+}
+
+.button-com {
+  background-color: #001529;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 </style>
