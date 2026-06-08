@@ -13,6 +13,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     BaGuaXian: typeof import('./src/components/canvas/BaGuaXian.vue')['default']
     Bar: typeof import('./src/components/echarts/Bar.vue')['default']
+    ClipStar: typeof import('./src/components/canvas/ClipStar.vue')['default']
     ElAlert: typeof import('element-plus/es')['ElAlert']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']

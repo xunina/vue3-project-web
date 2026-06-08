@@ -36,7 +36,7 @@ const router = createRouter({
           path: 'function-demo',
           name: 'FunctionDemo',
           component: () => import('../views/FunctionDemo.vue'),
-          redirect: '/function-demo/echarts',
+          redirect: '/function-demo/canvas',
           meta: {
             isTopMenu: true,
             showInMenu: true,
