@@ -5,12 +5,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { shallowRef, onMounted, onBeforeUnmount } from 'vue'
 
 // // 引入 echarts 核心模块，核心模块提供了 echarts 使用必须要的接口。
 import * as echarts from 'echarts/core'
 
-const chartRef = ref<HTMLElement | null>(null)
+const chartRef = shallowRef<HTMLElement | null>(null)
 let myChart: echarts.ECharts | null = null
 let resizeObserver: ResizeObserver | null = null
 

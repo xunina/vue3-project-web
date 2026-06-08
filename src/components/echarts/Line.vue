@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
+import { shallowRef, watch, onMounted, onBeforeUnmount } from 'vue'
 import { init } from 'echarts/core'
 import { LineChart } from 'echarts/charts'
 import { GridComponent, TooltipComponent, LegendComponent } from 'echarts/components'
@@ -26,7 +26,7 @@ const props = defineProps({
   },
 })
 
-const chartRef = ref<HTMLElement>()
+const chartRef = shallowRef<HTMLElement>()
 let chart: any = null
 let resizeObserver: ResizeObserver | null = null
 

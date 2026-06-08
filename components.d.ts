@@ -28,6 +28,7 @@ declare module 'vue' {
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
     Line: typeof import('./src/components/echarts/Line.vue')['default']
     MouseParticles: typeof import('./src/components/canvas/MouseParticles.vue')['default']
+    RadarChart: typeof import('./src/components/echarts/RadarChart.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TaiJiRotate: typeof import('./src/components/canvas/TaiJiRotate.vue')['default']

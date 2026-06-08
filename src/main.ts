@@ -9,7 +9,7 @@ import router from './router'
 // 引入 echarts 核心模块，核心模块提供了 echarts 使用必须要的接口。
 import * as echarts from 'echarts/core'
 // 引入柱状图图表，图表后缀都为 Chart
-import { BarChart, LineChart } from 'echarts/charts'
+import { BarChart, LineChart, RadarChart } from 'echarts/charts'
 // 引入标题，提示框，直角坐标系，数据集，内置数据转换器组件，组件后缀都为 Component
 import {
   TitleComponent,
@@ -33,6 +33,7 @@ echarts.use([
   LegendComponent,
   BarChart,
   LineChart,
+  RadarChart,
   LabelLayout,
   UniversalTransition,
   CanvasRenderer,

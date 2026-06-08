@@ -2,12 +2,14 @@
   <div class="echarts-ctn">
     <Line :option="lineOption" />
     <Bar></Bar>
+    <RadarChart></RadarChart>
   </div>
 </template>
 
 <script setup lang="ts">
 import Bar from '@/components/echarts/Bar.vue'
 import Line from '@/components/echarts/Line.vue'
+import RadarChart from '@/components/echarts/RadarChart.vue'
 
 const lineOption = {
   title: {
