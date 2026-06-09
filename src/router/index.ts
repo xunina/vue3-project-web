@@ -14,12 +14,25 @@ const router = createRouter({
           path: 'home',
           name: 'Home',
           component: HomeView,
+          redirect: '/home/js-view',
           meta: {
             isTopMenu: true,
             showInMenu: true,
             title: '首页',
             order: 1,
           },
+          children: [
+            {
+              path: 'js-view',
+              name: 'JsView',
+              component: () => import('../views/JsView.vue'),
+              meta: {
+                showInMenu: true,
+                title: 'JavaScript',
+                order: 1,
+              },
+            },
+          ],
         },
         {
           path: 'about',

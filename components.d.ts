@@ -11,6 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AlgorithmVisualization: typeof import('./src/components/js-components/AlgorithmVisualization.vue')['default']
     BaGuaXian: typeof import('./src/components/canvas/BaGuaXian.vue')['default']
     Bar: typeof import('./src/components/echarts/Bar.vue')['default']
     ClipStar: typeof import('./src/components/canvas/ClipStar.vue')['default']
