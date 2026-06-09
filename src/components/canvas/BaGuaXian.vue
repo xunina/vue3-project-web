@@ -1,3 +1,9 @@
+<template>
+  <div class="bagua-ctn">
+    <canvas ref="baGuaXianRef" width="300" height="300"> </canvas>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
@@ -57,11 +63,7 @@ function drawBaGua(
   ctx.stroke()
 }
 </script>
-<template>
-  <div class="bagua-ctn">
-    <canvas ref="baGuaXianRef" width="400" height="400"> </canvas>
-  </div>
-</template>
+
 <style lang="css" scoped>
 .bagua-ctn {
   display: flex;

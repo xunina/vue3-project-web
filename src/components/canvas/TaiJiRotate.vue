@@ -1,3 +1,9 @@
+<template>
+  <div class="taiji-ctn">
+    <canvas ref="taijiCanvasRef" width="300" height="300"></canvas>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
@@ -68,12 +74,6 @@ function animate() {
   requestAnimationFrame(animate)
 }
 </script>
-
-<template>
-  <div class="taiji-ctn">
-    <canvas ref="taijiCanvasRef" width="400" height="400"></canvas>
-  </div>
-</template>
 
 <style scoped>
 .taiji-ctn {

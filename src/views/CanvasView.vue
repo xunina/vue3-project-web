@@ -25,7 +25,7 @@ import ClipStar from '@/components/canvas/ClipStar.vue'
     <el-card class="card-com">
       <template #header>
         <div>
-          <span>星星</span>
+          <span>星星(裁剪区域)</span>
         </div>
       </template>
       <ClipStar></ClipStar>
@@ -35,14 +35,15 @@ import ClipStar from '@/components/canvas/ClipStar.vue'
 
 <style lang="css" scoped>
 .card-ctn {
-  min-width: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px auto;
+  width: 100%;
+  padding: 20px;
 }
 .card-com {
-  max-width: 400px;
-  margin: 1rem;
+  width: 100%;
+  height: 100%;
 }
 </style>

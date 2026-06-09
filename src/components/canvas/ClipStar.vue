@@ -1,3 +1,9 @@
+<template>
+  <div class="star-ctn">
+    <canvas ref="starRef" width="300" height="300"> </canvas>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
@@ -58,12 +64,6 @@ function drawStar(ctx: CanvasRenderingContext2D, r: number) {
   ctx.restore()
 }
 </script>
-
-<template>
-  <div class="star-ctn">
-    <canvas ref="starRef" width="400" height="400"> </canvas>
-  </div>
-</template>
 
 <style lang="css" scoped>
 .star-ctn {
