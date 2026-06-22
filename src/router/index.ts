@@ -32,6 +32,16 @@ const router = createRouter({
                 order: 1,
               },
             },
+            {
+              path: 'css-view',
+              name: 'CssView',
+              component: () => import('../views/CssView.vue'),
+              meta: {
+                showInMenu: true,
+                title: 'css',
+                order: 2,
+              },
+            },
           ],
         },
         {

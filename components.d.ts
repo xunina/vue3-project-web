@@ -14,6 +14,7 @@ declare module 'vue' {
     AlgorithmVisualization: typeof import('./src/components/js-components/AlgorithmVisualization.vue')['default']
     BaGuaXian: typeof import('./src/components/canvas/BaGuaXian.vue')['default']
     Bar: typeof import('./src/components/echarts/Bar.vue')['default']
+    CardCom: typeof import('./src/components/css-components/CardCom.vue')['default']
     ClipStar: typeof import('./src/components/canvas/ClipStar.vue')['default']
     ElAlert: typeof import('element-plus/es')['ElAlert']
     ElButton: typeof import('element-plus/es')['ElButton']
