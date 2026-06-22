@@ -45,17 +45,6 @@ const router = createRouter({
           ],
         },
         {
-          path: 'about',
-          name: 'About',
-          component: () => import('../views/AboutView.vue'),
-          meta: {
-            isTopMenu: true,
-            showInMenu: true,
-            title: '关于',
-            order: 2,
-          },
-        },
-        {
           path: 'function-demo',
           name: 'FunctionDemo',
           component: () => import('../views/FunctionDemo.vue'),
@@ -64,7 +53,7 @@ const router = createRouter({
             isTopMenu: true,
             showInMenu: true,
             title: '功能演示',
-            order: 3,
+            order: 2,
           },
           children: [
             {
@@ -108,6 +97,17 @@ const router = createRouter({
               },
             },
           ],
+        },
+        {
+          path: 'about',
+          name: 'About',
+          component: () => import('../views/AboutView.vue'),
+          meta: {
+            isTopMenu: true,
+            showInMenu: true,
+            title: '关于',
+            order: 5,
+          },
         },
       ],
     },
