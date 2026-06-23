@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue'
 
-const particles = []
+interface Particle {
+  x: number
+  y: number
+  size: number
+  speed: number
+  color: string
+}
+
+const particles: Particle[] = []
 const particleCount = 30
 const cursor = { x: 0, y: 0 }
 

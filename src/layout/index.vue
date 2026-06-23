@@ -64,7 +64,7 @@ const leftMenuRoutes = computed(() => {
   let targetParent = null
   for (let i = 0; i < route.matched.length; i++) {
     const record = route.matched[i]
-    if (record.meta?.isTopMenu) {
+    if (record?.meta?.isTopMenu) {
       targetParent = record
       break
     }

@@ -7,9 +7,6 @@
 <script setup lang="ts">
 import { shallowRef, watch, onMounted, onBeforeUnmount } from 'vue'
 import { init } from 'echarts/core'
-import { LineChart } from 'echarts/charts'
-import { GridComponent, TooltipComponent, LegendComponent } from 'echarts/components'
-import { SVGRenderer } from 'echarts/renderers'
 
 const props = defineProps({
   width: {
@@ -35,7 +32,6 @@ const initChart = () => {
 
   chart = init(chartRef.value, null, {
     renderer: 'svg',
-    components: [GridComponent, TooltipComponent, LegendComponent, LineChart],
   })
 
   updateChart()
@@ -47,7 +43,7 @@ const updateChart = () => {
 }
 
 function resizeChart() {
-  resizeObserver = new ResizeObserver((entries) => {
+  resizeObserver = new ResizeObserver(() => {
     if (chart) chart.resize()
   })
   if (chartRef.value) {

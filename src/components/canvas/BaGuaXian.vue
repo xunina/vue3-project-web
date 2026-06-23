@@ -50,7 +50,7 @@ function drawBaGua(
     const textX = cx + Math.cos(rad) * (textInR + (inR - textInR) / 2)
     const textY = cy + Math.sin(rad) * (textInR + (inR - textInR) / 2)
     ctx.fillStyle = '#8B0000'
-    ctx.fillText(guaTextList[idx], textX, textY)
+    ctx.fillText(guaTextList[idx] ?? '', textX, textY)
   })
 
   ctx.beginPath()
