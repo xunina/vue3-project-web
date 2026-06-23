@@ -59,11 +59,11 @@ const startSort = async () => {
       for (let inJ: number = 0; inJ < len - 1 - outI; inJ++) {
         highlightIndices.value = [inJ, inJ + 1]
         await sleep(400)
-        if (targetArray.value[inJ] > targetArray.value[inJ + 1]) {
-          ;[targetArray.value[inJ], targetArray.value[inJ + 1]] = [
-            targetArray.value[inJ + 1],
-            targetArray.value[inJ],
-          ]
+        const curtVal = targetArray.value[inJ]!
+        const nextVal = targetArray.value[inJ + 1]!
+        if (curtVal > nextVal) {
+          targetArray.value[inJ] = nextVal
+          targetArray.value[inJ + 1] = curtVal
         }
       }
     }

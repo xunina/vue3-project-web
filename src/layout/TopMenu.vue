@@ -14,12 +14,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps } from 'vue'
+import { computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
 
 // 通过props接收父组件传递的菜单数据
 const props = defineProps<{
-  menuRoutes: any[]
+  menuRoutes: RouteRecordRaw[]
 }>()
 
 const router = useRouter()
