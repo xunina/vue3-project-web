@@ -1,9 +1,12 @@
 <template>
   <div>
-    <label>随即昵称生成：</label>
-    <el-input v-model="chineseName" style="width: 240px" placeholder="Please input" />
     <el-button @click="clickRefresh"> 生成 </el-button>
     <el-button @click="clickCopy"> 复制 </el-button>
+    <el-input
+      v-model="chineseName"
+      style="display: block; margin-top: 20px; width: 240px"
+      placeholder="Please input"
+    />
   </div>
 </template>
 
