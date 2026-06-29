@@ -99,6 +99,30 @@ const router = createRouter({
           ],
         },
         {
+          path: 'small-tools',
+          name: 'SmallTools',
+          component: () => import('../views/small-tools/SmallToolsView.vue'), // TODO: if haven't this, what is result
+          redirect: '/small-tools/random-generate',
+          meta: {
+            isTopMenu: true,
+            showInMenu: true,
+            title: '小工具',
+            order: 3,
+          },
+          children: [
+            {
+              path: 'random-generate',
+              name: 'RandomGenerate',
+              component: () => import('../views/small-tools/RandomGenerateView.vue'),
+              meta: {
+                showInMenu: true,
+                title: '随机生成',
+                order: 1,
+              },
+            },
+          ],
+        },
+        {
           path: 'about',
           name: 'About',
           component: () => import('../views/AboutView.vue'),
